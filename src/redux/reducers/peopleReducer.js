@@ -1,13 +1,14 @@
 import { ActionTypes } from "../constants/actionTypes";
 const intialState = {
   peoples: {
-    count: null,
+    count: 1,
     next: null,
     previous: null,
+    results: [],
   },
 };
 
-export const peoplesReducer = (state = intialState, { type, payload }) => {
+export const peopleReducer = (state = intialState, { type, payload }) => {
   switch (type) {
     case ActionTypes.FETCH_PEOPLES:
       return { ...state, peoples: payload };
